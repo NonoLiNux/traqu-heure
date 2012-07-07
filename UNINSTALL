@@ -1,0 +1,3 @@
+Pour désinstaller la suite application Traqu'heure et supprimer la surveillance du dossier, il faut bien penser à :
+* supprimer les deux lignes ajoutées au crontab par le script d'initialisation
+* supprimer le répertoire .git dans le dossier surveillé
