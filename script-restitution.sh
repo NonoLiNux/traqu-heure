@@ -3,4 +3,8 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 cd /chemin/vers/mon/dossier/à/surveiller
 
-git log --pretty=format:"########## %s ###########" --after="yesterday" -p|mail -s "Rapport traqu'heure pour votre dossier" moi@moi.moi 
+mavar=$(git log --pretty=format:"########## %s ###########" --after="yesterday" -p)
+
+if [ -z "$mavar" ]; then mavar="Ce dossier n'a pas subi de modifications."; fi
+
+echo "$mavar" |mail -s "Rapport traqu'heure pour votre dossier" moi@moi.moi
