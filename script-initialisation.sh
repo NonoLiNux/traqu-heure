@@ -3,7 +3,7 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 git config --global user.name "Mon petit nom"
 git config --global user.email "moi@moi.moi"
-git init
+git init --shared=0711
 
 #premier commit
 git add -A
