@@ -7,6 +7,9 @@ git config --global user.email "moi@moi.moi"
 madate=`date "+%d-%m-%Y à %H:%M:%S"`
 
 cd /chemin/vers/mon/dossier/à/surveiller
+
+mesmodifs=`git status --porcelain`
+
 git add -A
-git commit -m "le $madate, des fichiers ont été modifiés."
+git commit -m "le $madate, les fichiers suivant ont été modifiés. $mesmodifs"
 
